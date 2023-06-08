@@ -13,7 +13,7 @@
 ### 작품 사진
 ![KakaoTalk_20230607_221943184](https://github.com/wanyam2/automaton1/assets/131340668/cbf842e6-1562-4724-8d0b-c97a607b176c)
 ## 동작 시나리오 및 예시
-물체와의 거리가 1~5cm라면 도, 6~10cm라면 레, 11cm 이상이라면 미 소리를 낸다.
+물체와의 거리가 1 ~ 5cm라면 도, 6 ~ 10cm라면 레, 11cm 이상이라면 미 소리를 낸다.
 
 https://github.com/wanyam2/automaton1/assets/131340668/75532c33-d8e2-481a-ba20-2075b18135a3
 
