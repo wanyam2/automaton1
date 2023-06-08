@@ -32,7 +32,6 @@ client = mqtt.Client()
 client.connect(MQTT_HOST, MQTT_PORT, MQTT_KEEPALIVE_INTERVAL)
 client.loop_start()
 
-# 초음파 센서 값을 읽는 함수 (가상 함수로 대체)
 Buzz = 12
 triggerPin = 14
 echoPin = 4
@@ -58,10 +57,8 @@ try:
         start = time.time()
         stop = time.time()
             
-    #에코핀이 on 되는 시점을 시작 시간으로 잡는다
         while GPIO.input(echoPin) == 0:
             start = time.time()
-    #에코핀이 다시 off 되는 시점을 반사판 수신 시간으로 잡는다
         while GPIO.input(echoPin) == 1:
             stop = time.time()
 
@@ -90,12 +87,11 @@ try:
         else: 
             Buzz.stop()
             time.sleep(0.3)
-        # 센서 데이터를 JSON 형식으로 변환
+
         sensing = {
             "distance": distance
         }
         value = json.dumps(sensing)
-        # MQTT에 값 publish
         client.publish(MQTT_PUB_TOPIC, value)
         print(value)
 
