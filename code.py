@@ -26,10 +26,8 @@ try:
         start = time.time()
         stop = time.time()
             
-    #에코핀이 on 되는 시점을 시작 시간으로 잡는다
         while GPIO.input(echoPin) == 0:
             start = time.time()
-    #에코핀이 다시 off 되는 시점을 반사판 수신 시간으로 잡는다
         while GPIO.input(echoPin) == 1:
             stop = time.time()
 
